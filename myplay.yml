@@ -1,0 +1,10 @@
+- hosts: localhost
+  tasks:
+
+      - name: Test that my module works
+        copy_remotely: 
+            src: /home/dan/Downloads/alertsite-desktop-proxy-master
+            dest: /home/dan/Documents/alertsite-desktop-proxy-master
+        register: result
+  
+      - debug: var=result   
